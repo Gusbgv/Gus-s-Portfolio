@@ -27,7 +27,7 @@ body{
 
 b{
   font-weight: 900;
-  color: #9067C6;
+  color: #5c07cb;
 }
 
 /* Scrollbar */
@@ -90,7 +90,7 @@ b{
   font-size: 32px;
   letter-spacing: 2px;
   padding-left: 7%;
-  color: #9067C6;
+  color: #5c07cb;
   display: flex;
   align-items: center;
   text-align: center;
@@ -297,7 +297,7 @@ b{
   padding-bottom: 40px;
 }
 .AboutText a{
-  color: #9067C6;
+  color: #5c07cb;
   text-decoration: underline;
   font-weight: bold;
   text-align: center; /* Ensures text is centered */

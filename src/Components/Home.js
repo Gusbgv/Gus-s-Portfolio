@@ -11,7 +11,7 @@ const Home = () => {
 
         <div className='HomeText'>
           <h1>Hi There!</h1>
-          <h1>I'M <b>GUSTAVO GARCIA VARGAS</b></h1>
+          <h1>I'M <b>GUSTAVO GARCIA-VARGAS</b></h1>
           <Typed />
         </div>
 
@@ -34,7 +34,7 @@ const Home = () => {
             I also love <b>working on creative projects</b> like game development and website design.<br /><br />
 
             Outside of work, I enjoy <b>running, hitting the gym</b>, and listening to <b>music</b> to stay active and motivated.<br /><br />
-            Also, I love <b>coffee</b> <CiCoffeeCup style={{ scale: "1.5", rotate: "15deg" }} />   
+            Also, I love <b>iced coffee</b> <CiCoffeeCup style={{ scale: "1.5", rotate: "15deg" }} />   
           </p>
         </div>
       </div>
