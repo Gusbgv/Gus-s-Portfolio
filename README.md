@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website! This project showcases my work, skills, and experiences as a web developer and digital artist.
 
 ## 🔗 Live Demo
-[Visit Portfolio Website]([https://gusbgv.github.io/Gus-s-Portfolio/](https://gus-s-portfolio.vercel.app/))
+[Visit Portfolio Website]([https://gusbgv.github.io/Gus-s-Portfolio/](https://gus-s-portfolio.vercel.app/)])
 
 ## 📌 Features
 - Modern UI Design with React.js
