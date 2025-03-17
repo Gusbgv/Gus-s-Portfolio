@@ -5,7 +5,8 @@ import { GrMail } from "react-icons/gr";
 const Footer = () => {
   return (
     <footer>
-      <h4>© {new Date().getFullYear()} Gustavo Garcia Vargas</h4>
+      <h6> Designed & Developed by Gustavo Garcia-Vargas</h6><br />
+      <h6>Copyright © {new Date().getFullYear()} GGV</h6>
       <div className='footerLinks'>
         <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target='_blank' rel="noopener noreferrer"><FaLinkedin/></a>
         <a href='mailto:gustavobgv27@gmail.com' target='_blank' rel="noopener noreferrer"><GrMail/></a>

@@ -5,6 +5,7 @@ import { AiOutlineHome } from "react-icons/ai";
 import { BsPerson, BsCodeSlash } from "react-icons/bs";
 import { CgFileDocument } from "react-icons/cg";
 
+
 const Nav = () => {
   const [navbarblur, setnavbarblur] = useState(false);
 
@@ -53,15 +54,9 @@ const Nav = () => {
         <li onClick={hideMenu}><Link to="/About"><BsPerson /> About</Link></li>
         <li onClick={hideMenu}><Link to="/Project"><BsCodeSlash /> Projects</Link></li>
         <li onClick={hideMenu}>
-          <a 
-            href="https://drive.google.com/file/d/1PvI5PhIJ5kyxnIfv9_0tcr6k49tWaiYj/view?usp=sharing" 
-            target="_blank" 
-            rel="noopener noreferrer">
-            <CgFileDocument /> Resume
-          </a>
+          <Link to="/Resume"><CgFileDocument style={{ marginBottom: "2px" }} /> Resume</Link>
         </li>
       </ul>
-
     </nav>
   )
 }

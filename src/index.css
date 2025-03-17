@@ -95,6 +95,7 @@ b{
   align-items: center;
   text-align: center;
   cursor:pointer;
+  font-weight: bold;
 }
 
 .NavbarLinks{
@@ -453,79 +454,153 @@ b{
   border-style: none;
 }
 
-
-/* Resume */
-
-.ResumePage{
-  padding-top: 50px;
-  width: fit-content;
-  position: relative;
-  margin: 100px auto 0px;
-  text-align: center;
+/* Particles Background */
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;  /* Ensures particles stay in the background */
+  width: 100%;
+  height: 100%;
 }
 
-.resumeview{
-  pointer-events: none;
+/* General Styles for the Resume Section */
+.resume-section {
+  padding: 20px 0;
+  width: 100%;
 }
 
-.downloadCV{
-  cursor:pointer;
-  margin: 25px 0px;
-  width: 200px;
-  height: 40px;
-  background-color:#431f47;
-  color: #E7E7E7;
-  text-decoration: none;
-  border-radius: 5px;
-  border-style: none; 
-  transition: all 0.5s;
+.resume {
+  margin: 20px 0;
 }
 
-.downloadCV:hover{
-  transition: all 0.5s;
-  background-color: #E7E7E7;
-  color: #431f47;
+/* Styles for smaller screens like phones */
+@media (max-width: 768px) {
+  .resume-section {
+    padding: 10px 0; /* Adjust padding for smaller screens */
+  }
+
+  .resume {
+    margin: 10px 0; /* Adjust margin for smaller screens */
+  }
+
+  .resume iframe {
+    width: 100%;  /* Ensure the iframe (or the component rendering the resume) adjusts to screen width */
+    height: auto;  /* Maintain responsive height */
+  }
+}
+
+/* Styles for larger screens like tablets and desktops */
+@media (min-width: 769px) {
+  .resume {
+    margin: 40px 0; /* Add extra margin for larger screens */
+  }
+}
+
+/* Adjusting the Download Button Position */
+.resume-section .btn {
+  max-width: 250px;
+  width: 100%;
+  margin-top: 40px; /* Add space above the button */
+  margin-bottom: 20px; /* Keep space below the button */
+  padding: 10px 20px; /* Adjust button padding if needed */
+}
+
+
+/* Ensure the PDF scales correctly across devices */
+.resume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-pdf__Page {
+  width: 100%;
+  max-width: 1000px; /* Prevent it from stretching too much on larger screens */
+  margin: 0 auto;
+}
+
+/* For the resume page, make sure it's fully contained within the layout */
+.react-pdf__Page__canvas {
+  max-width: 100%; /* Prevent canvas from going beyond the width */
+  height: auto;  /* Maintain the aspect ratio */
+}
+
+/* When on small screens, allow the content to fit better */
+@media (max-width: 768px) {
+  .react-pdf__Page {
+    padding: 0 10px; /* Add small padding for small screens */
+  }
+}
+
+/* Example of adding some animations */
+@media (max-width: 768px) {
+  .resume-section {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 
 /* FOOTER */
-
-footer{
-  width: 90%;
-  height: 40px;
-  margin: 10px auto;
-  margin-top: 80px;
-  letter-spacing: 0.5px;
-  
-  display:flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-  
+footer {
+  width: 100%;               /* Ensure full width */
+  min-height: 120px;         /* Ensure the footer has a minimum height to fully cover */
+  letter-spacing: 0.25px;
+  display: flex;
+  flex-direction: column;    /* Stack content vertically */
+  align-items: center;       /* Center content horizontally */
+  justify-content: center;   /* Center content vertically */
   position: relative;
-  bottom: 0px;
-  text-align: center;
+  background: linear-gradient(to right, #040730, #1d0230); /* Gradient*/
+  color: white;              /* Text color */
+  padding: 20px 0;           /* Padding for content spacing */
+  margin-top: 80px;          /* Add space above footer (adjust as necessary) */
 }
 
-footer h4{
-  margin: 0 25px;
+/* FOOTER TEXT */
+footer h6 {
+  margin: 0px 0;             /* Add margin to separate the h6 elements */
   font-weight: 500;
 }
 
-.footerLinks{
+/* SOCIAL ICONS LINKS */
+.footerLinks {
   display: flex;
   width: 180px;
   font-size: 18px;
   justify-content: space-evenly;
 }
 
-.footerLinks a{ 
+.footerLinks a {
   text-decoration: none;
   color: inherit;
 }
 
-@media(max-width:750px){
-  footer{
-    height: 110px;
+.footerLinks a:hover {
+  color: #0e76a8;  /* LinkedIn blue color on hover */
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 750px) {
+  footer {
+    min-height: 150px;      /* Adjust min-height for smaller screens */
+  }
+
+  footer h6 {
+    font-size: 14px;        /* Adjust font size for smaller screens */
+  }
+
+  .footerLinks {
+    width: 150px;           /* Adjust width of social icon section */
+    font-size: 16px;        /* Adjust font size of social icons */
   }
 }
